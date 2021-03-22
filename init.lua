@@ -170,7 +170,7 @@ local function on_explode_normal(pos, range)
 			local n = minetest.get_node(nodepos)
 			if n.name ~= "air" and n.name ~= "ignore" then
 				activate_if_tnt(n.name, nodepos, pos, range)
-				minetest.replace_node(nodepos, {name="water_source"})
+				minetest.swap_node(nodepos, {name="water_source"})
 			end
 
 		end
